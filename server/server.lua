@@ -4,8 +4,8 @@ local precioAlquiler, nombreBici 		= nil, nil
 local resourceVersion			= Config.Version
 
 
-RegisterServerEvent('alquiler-bicicletas:dineroMano')
-AddEventHandler('alquiler-bicicletas:dineroMano', function(tipoBici, tiempoAlquiler)
+RegisterServerEvent('gonzalapa-alquilerbicis:dineroMano')
+AddEventHandler('gonzalapa-alquilerbicis:dineroMano', function(tipoBici, tiempoAlquiler)
 	local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
 	local playerMoney = xPlayer.getMoney()
@@ -43,7 +43,7 @@ AddEventHandler('alquiler-bicicletas:dineroMano', function(tipoBici, tiempoAlqui
 	end
 
 	if paid then
-		TriggerClientEvent('alquiler-bicicletas:sacarBici', source, tipoBici, tiempoAlquiler)
+		TriggerClientEvent('gonzalapa-alquilerbicis:sacarBici', source, tipoBici, tiempoAlquiler)
 	end
 end)
 

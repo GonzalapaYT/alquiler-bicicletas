@@ -49,8 +49,8 @@ Citizen.CreateThread(function()
     end
 end)
 
-RegisterNetEvent('alquiler-bicicletas:sacarBici')
-AddEventHandler('alquiler-bicicletas:sacarBici', function(tipoBici, tiempoAlquiler)
+RegisterNetEvent('gonzalapa-alquilerbicis:sacarBici')
+AddEventHandler('gonzalapa-alquilerbicis:sacarBici', function(tipoBici, tiempoAlquiler)
     local player = GetPlayerPed(-1)
     local playerCoords = GetEntityCoords(player, false)
     local playerHeading = GetEntityHeading(player, false)
@@ -206,7 +206,7 @@ function rentBike(bikeType)
             else
                 menu.close()
                 timer = amount
-                TriggerServerEvent('alquiler-bicicletas:dineroMano', bikeType, amount)
+                TriggerServerEvent('gonzalapa-alquilerbicis:dineroMano', bikeType, amount)
             end
         end,
         function(data, menu)
